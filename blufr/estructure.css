@@ -1,0 +1,104 @@
+/*-----------------------
+	.blu framework
+	Nombre componente: Estructure style
+	Version: dev
+-----------------------*/
+
+
+/* Slider de Trabajo */
+#mainBody {
+	/* inestable con margenes */
+	overflow:hidden;
+	position:relative;
+	}
+#mainBody-grid{
+	margin:0; padding:0;
+	background:#d1d1d1;
+	transition:left .35s ease-in-out;
+	position:relative;
+	left:0px;
+	}
+#mainBody article {
+	margin:0;padding:0;
+	display:inline-block;
+	overflow:hidden;
+	}
+	#mainBody article form span {
+		font-style:italic;
+		}
+	#mainBody article iframe.horizontal {
+		float:left; /* Posible conflicto a futuro, revisar */
+		}
+
+
+/* Menu de Aplicación */
+#bluFrMenu {
+	background-color:#323334;
+	color:#FFF;
+	position:relative;
+	text-align:left;
+	margin-bottom:20px;
+    }
+
+	#firstLvl {
+		line-height:50px;
+		}
+	#firstLvl span {
+		display:inline-block;
+		padding:0 20px;
+		margin:0;
+		}
+
+	#secondLvl {
+		background-color:#ff4070;
+		line-height:25px;
+		}
+	#secondLvl ul {
+		display:inline-block;
+		list-style-type:none;
+		padding:0;
+		margin:0;		
+		}
+	#secondLvl ul li{
+		display:inline-block;
+		margin:0;
+		padding:0 12px;
+		background:transparent;
+		border-right:1px dotted #ff7598;
+		position:relative;
+		bottom:0;
+		transition:background .7s, bottom .4s;
+		}
+		#secondLvl ul li:first-child { /* Correción Inexplicable */
+			margin-right:-6px;
+			}
+		#secondLvl ul li.markup {
+			background:#323334;
+			border-right:0;
+			bottom:3px;
+			border-top-left-radius:5px;
+			border-top-right-radius:5px;
+			}
+		#secondLvl ul li:hover{ background:#ff7598; }
+	#secondLvl ul li a {
+		color:#FFF;
+		}
+	
+	#appID { font-weight:bold; }
+	#appID i {
+		font-size:smaller;
+		color:#727272;
+		}
+	#fullname{
+		position:absolute;
+		right:30px;
+		color:#91D6F7;
+		text-transform:capitalize;
+		}
+	#config {
+		position:absolute;
+		width:40px;
+		height:50px;
+		margin:0; padding:0;
+		top:0; right:0;
+		}

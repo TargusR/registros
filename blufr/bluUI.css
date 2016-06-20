@@ -1,0 +1,346 @@
+/*-----------------------
+	.blu framework
+	Nombre componente: UI style
+	Version: 1.0
+-----------------------*/
+
+/* Paleta de colores -------------------------
+	#ff4070 - rosa
+	#47e1f3 - azul
+	#68f982 - verde
+	#ff4848 - rojo
+	#fde457 - amarillo
+	#323334 - gris oscuro
+	#d1d1d1 - gris claro
+	
+	texto
+	#91D6F7 - azul
+	#fcdd81 - amarillo
+	#727272 - Gris
+	-------------------------*/
+
+/* General Settings */
+
+body{
+	margin:0; padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#121212;
+	background:url('../sources/fondo_blanco.jpg');
+	}
+
+a, a:visited {
+	border:0;
+	outline:0;
+	text-decoration:none;
+	transition:color .6s;
+	} a:hover { }
+
+.dobleCentrado {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	}
+	
+	
+/* Tables */	
+table {
+	font-size:smaller;
+	margin:0 auto;
+	}
+table th {
+	font-size:initial;
+	background:#323334;
+	text-align:center;
+	padding:6px 12px;
+	border-radius:2px;
+	}
+table th, table th a, table th a:visited {
+	color:#fde457;
+	}
+	table th a:hover {
+		color:#47e1f3;
+		}
+	table th.ordered {
+		background:#fde457;
+		}
+	table th.ordered, table th.ordered a, table th.ordered a:visited {
+		color:#323334;
+		}
+	table th.ASC {
+		padding-right:25px;
+		position:relative;
+		} table th.ASC:before {
+			content:'▲';
+			display:block;
+			text-align:center;
+			width:20px;
+			position:absolute;
+			right:5px;
+			}
+	table th.DESC {
+		padding-right:25px;
+		position:relative;
+		} table th.DESC:before {
+			content:'▼';
+			display:block;
+			text-align:center;
+			width:20px;
+			position:absolute;
+			right:5px;
+			}
+table td{
+	border-bottom:1px dotted #d1d1d1;
+	padding:2px 12px;
+	text-align:left;
+	position:relative;
+	overflow:hidden;
+	}
+	a.field-edit {
+		display:block;
+		position:absolute;
+		right:0;
+		bottom:-17px;
+		opacity: .4;
+		transition:bottom .3s ease-out, opacity .6s;
+		}
+		a.field-edit:hover {
+			bottom:0;
+			opacity: 1.0;
+			}
+
+/* Anexo para tabular formularios */
+form table {
+	font-size:initial;
+	margin:0;
+	}
+form table td, form table th {
+	line-height:28px;
+	border:0;
+	padding:2px 12px;
+	vertical-align:top;
+	}
+form table th {
+	text-align:right;
+	text-transform:capitalize;
+	font-weight:normal;
+	background:transparent;
+	color:initial;
+	}
+
+	/* Linea de Edición */
+	#inlineForm form table{
+		text-align:center;
+		margin:10px auto;
+		background:#47e1f3;
+		border-radius:10px;
+		line-height:30px;
+		position:relative;
+		}
+		#inlineForm form table:before{
+			width:0;
+			height:0;
+			content:'';
+			position:absolute;
+			top:-20px;
+			left:48%;
+			border:10px solid transparent;
+			border-bottom:10px solid #47e1f3;
+			}
+	
+	
+/* Notifications */
+
+.alert{
+	background:#fde457;
+	color:#323334;
+	margin:0 auto;
+	padding-left:65px;
+	min-height:50px;
+	position:relative;
+	} .alert:before {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		content:'i';
+		font-size:3em;
+		font-family:times,serif;
+		font-weight:bold;
+		font-style:italic;
+		color:#fde457;
+		width:50px;
+		height:100%;
+		line-height:50px;
+		position:absolute;
+		left:0;
+		background:#323334;			
+		}
+	.alert p { line-height:50px; }
+	.alert a.close {
+		display:block;
+		width:20px;
+		height:20px;
+		position:absolute;
+		top:4px;
+		right:4px;
+		}
+
+/* indice y paginación */
+.index {
+	display:block;
+	margin:4px auto;
+	text-align:center;
+	}
+	span.disable{
+		color:#d1d1d1;
+		}
+	span.markup{
+		display:inline-block;
+		background:#323334;
+		color:#fde457;
+		font-weight:bold;
+		padding:4px 8px;
+		border-radius:2px;
+		}
+
+
+/* Bitacoras */		
+section.bitacora article {
+	margin:10px auto;
+	background:#47e1f3;
+	
+	}
+section.bitacora article header {
+	background:#323334;
+	padding:0 10px;
+	color:#fff;
+	line-height:40px;
+	}
+section.bitacora article footer {
+	color:#FFF;
+	padding:4px 6px;
+	font-size:.9em;
+	letter-spacing:.1em;
+	}
+	section.bitacora article footer span {
+		font-style:italic;
+		}
+	
+Section.bitacora article h1 {
+	display:inline;
+	color:#91D6F7;
+	}
+
+Section.bitacora article p {
+	margin:10px;
+	}
+
+section.bitacora article.child {
+	margin-left:50px;
+	margin-right:40px;
+	position:relative;
+	}
+	
+section.bitacora article.client {
+	background:#fde457;
+	margin-left:90px;
+	margin-right:0px;
+	}
+	section.bitacora article.client h1 {
+		color:#fcdd81;
+		}
+		
+section.bitacora article.validado {
+	background:#68f982;
+	}
+	section.bitacora article.validado h1 {
+		color:#68f982;
+		}
+		
+/* Menu interno del frame hijo */
+#sub-selector {
+	margin:0;
+	padding-top:1px;
+	min-height:30px; 
+	line-height:30px; 
+	background:#d1d1d1;
+	font-size:smaller;
+	}
+#sub-selector a, #sub-selector span {
+	display:inline-block;
+	padding:0 18px;
+	}
+	#sub-selector span {
+		background:#fff;
+		font-weight:bold;
+		border-top-left-radius:6px;
+		border-top-right-radius:6px;
+		}
+	#sub-selector a {
+		color:#fff;
+		}
+	#sub-selector a img {
+		margin:0; padding:0;
+		position:relative;
+		bottom:-6px;
+		left:10px;
+		}
+	#sub-selector .reload {
+		position:absolute;
+		right:0; top:0;
+		background:#323334;
+		border-left:2px solid #47e1f3;
+		border-right:0;
+		transition:background .4s;
+		}
+		#sub-selector .reload:hover{
+			background:#ff4070;
+			}
+	#sub-selector .filtro {
+		position:absolute;
+		right:110px; top:0; 
+		background:#fde457;
+		color:#323334;
+		border-left:2px solid #47e1f3;
+		border-right:0;
+		transition:background .4s;
+		}
+		#sub-selector .filtro:hover{
+			background:#ff4848;
+			}
+		
+/* Controles */
+.cmd {
+	padding:1px 8px!important;
+	margin:0px auto;
+	background:#d1d1d1;
+	border:1px solid rgba(255,255,255,.5);
+	border-radius:3px;
+	color:#727272;
+	cursor:pointer;
+	font-size:1em;
+	transition:border .6s;
+	}
+	a.cmd {
+		display:inline-block;
+		}
+	.cmd:hover {
+		border-color:rgba(255,255,255,1);
+		}
+
+input, textarea, select, option {
+	border:1px solid rgba(255,255,255,.5);
+	transition:border .6s;
+	background:#fff;
+	}
+	input:hover, textarea:hover {
+		border-color:rgba(255,255,255,1);
+		}
+	input:focus, textarea:focus {
+		border-color:rgba(255,64,112,1);
+		}
+	input:active, textarea:active {
+		border-color:rgba(104,249,130,1);
+		}
+	input:invalid, textarea:invalid {
+		border-color:rgba(255,72,72,1);
+		}

@@ -1,0 +1,18 @@
+REX BARAN
+
+:: Mods pendientes ::
+-Crear paquete si no existe en cada tabla
+-Mostrar progresos independientes para guias separadas
+-Consultar paquetes segun vendedor (modulo de progresos)
+-Consultar paquetes viejos segun su primera fecha y la condición sin finalizar
+-Modulo compras
+-Herramientas administrativas
+-Comparación guía auto
+-Anadir vinculos a rastreadores de guias
+-Agregar toggle para mostrar u ocultar registro
+
+-Modificar variable server tablas:
+$_SESSION['nombre_component'] ->	tabla[nombre_tabla]
+													-[filtro]
+													-[indice]
+-Nueva tabla en cada bitacora que muestre paquetes en espera de la siguiente etapa

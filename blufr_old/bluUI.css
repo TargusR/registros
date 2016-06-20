@@ -1,0 +1,175 @@
+/*-----------------------
+	.blu framework
+	Nombre componente: UI style
+	Version: dev
+-----------------------*/
+
+/* Paleta de colores -------------------------
+	#ff4070 - rosa
+	#47e1f3 - azul
+	#68f982 - verde
+	#ff4848 - rojo
+	#fde457 - amarillo
+	#323334 - gris oscuro
+	#d1d1d1 - gris claro
+	
+	texto
+	#91D6F7 - azul
+	#fcdd81 - amarillo
+	-------------------------*/
+
+/* General Settings */
+
+body{
+	margin:0; padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#121212;
+	}
+
+a, a:visited {
+	border:0;
+	outline:0;
+	text-decoration:none;
+	transition:color .6s;
+	} a:hover { }
+
+
+	
+/* Tables */	
+
+table th, table th a, table th a:visited {
+	background:#323334;
+	color:#fde457;
+	text-align:center;
+	padding:6px 12px;
+	}
+	table th a:hover {
+		color:#47e1f3;
+		}
+	table th.ordered, table th.ordered a, table th.ordered a:visited {
+		background:#fde457;
+		color:#323334;
+		}
+	table th.ASC, table th.ASC a, table th.ASC a:visited {
+		border-bottom:#323334 solid 4px;
+		}
+	table th.DESC, table th.DESC a, table th.DESC a:visited {
+		border-top:#323334 solid 4px;
+		}
+table td{
+	border-bottom:1px dotted #d1d1d1;
+	padding:2px 12px;
+	}
+
+/* Anexo para tabular formularios */
+form table td {
+	border:0;
+	vertical-align:top;
+	}
+form table th {
+	text-align:right;
+	vertical-align:top;
+	font-weight:normal;
+	background:transparent;
+	padding:2px 12px;
+	color:initial;
+	}
+
+	
+	
+/* Notifications */
+
+.alert{
+	background:#fde457;
+	color:#323334;
+	margin:10px;
+	padding-left:65px;
+	height:50px;
+	position:relative;
+	} .alert:before {
+		content:'i';
+		text-align:center;
+		font-size:3em;
+		font-family:times,serif;
+		font-weight:bold;
+		font-style:italic;
+		color:#fde457;
+		display:block;
+		width:50px;
+		line-height:50px;
+		position:absolute;
+		left:0;
+		background:#323334;			
+		}
+	.alert p { line-height:50px; }
+
+/* indice y paginación */
+.index {
+	display:block;
+	margin:4px auto;
+	text-align:center;
+	}
+	span.disable{
+		color:#d1d1d1;
+		}
+	span.markup{
+		display:inline-block;
+		background:#323334;
+		color:#fde457;
+		font-weight:bold;
+		padding:4px 8px;
+		}
+
+
+/* Bitacoras */		
+section.bitacora article {
+	margin:10px auto;
+	background:#47e1f3;
+	
+	}
+section.bitacora article header {
+	background:#323334;
+	padding:0 10px;
+	color:#fff;
+	line-height:40px;
+	}
+section.bitacora article footer {
+	color:#FFF;
+	padding:4px 6px;
+	font-size:.9em;
+	letter-spacing:.1em;
+	}
+	section.bitacora article footer span {
+		font-style:italic;
+		}
+	
+Section.bitacora article h1 {
+	display:inline;
+	color:#91D6F7;
+	}
+
+Section.bitacora article p {
+	margin:10px;
+	}
+
+section.bitacora article.child {
+	margin-left:50px;
+	margin-right:40px;
+	position:relative;
+	}
+	
+section.bitacora article.client {
+	background:#fde457;
+	margin-left:90px;
+	margin-right:0px;
+	}
+	section.bitacora article.client h1 {
+		color:#fcdd81;
+		}
+		
+section.bitacora article.validado {
+	background:#68f982;
+	}
+	section.bitacora article.validado h1 {
+		color:#68f982;
+		}

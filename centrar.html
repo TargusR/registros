@@ -1,0 +1,96 @@
+<!doctype html>
+<HTML>
+<head>
+	<title>centrar</title>
+	<meta charset="utf-8" />
+	<style>
+		body{
+			margin:0; padding:0;
+			font-family:Verdana, Geneva, sans-serif;
+			/*display:flex;
+			min-height: 100vh;*/
+		}
+	
+		.vertical-align {
+			position: absolute;
+			top: 50%; 
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.cuadro {
+			width:400px;
+			height:200px;
+			display:block;
+			background-color:#47e1f3;
+		}
+		
+		
+		
+	/* Menu de Aplicación */
+	#smartMenu {
+		border-bottom:6px solid #b3b3b3;
+		margin-bottom:20px;
+		background:#FFF;
+		color:#B3B3B3;
+		font-size:1.4em;
+		position:relative;
+		text-align:left;
+		}
+		#smartMenu span{
+			display:inline-block;
+			line-height:50px;
+			list-style-type:none;
+			padding:0 20px;
+			margin:0;
+			text-indent:0;
+			}
+		#appID {
+			color:#f8cbcc;
+			font-size:3.6em;
+			letter-spacing:.02em;
+			overflow:hidden;
+			}
+		#fullname {
+			position:absolute;
+			right:30px;
+			}
+			#fullname span { padding:0; color:#91D6F7; }
+		#smartMenu div {
+			position:absolute;
+			width:40px;
+			height:50px;
+			margin:0; padding:0;
+			overflow:hidden;
+			}
+			#backLink {
+				top:0; left:0;
+				position:relative;
+				}
+				#backLink a img {
+					position:absolute;
+					top:0; left:0;
+					transition:left .3s;
+					} #backLink a img:hover {
+						left:-40px;
+						}
+			#config { top:0; right:0; }
+			
+		
+		
+	</style>
+</head>
+<body>
+
+<nav id='smartMenu'>
+	<span id='appID'>Apps Ventronic</span>
+	<span id='fullname'>Bienvenido <span><?php echo utf8_encode($_SESSION['Apps_nombre']);?></span></span>
+	<div id='config'><a href='?cmd=logmeout'><img src='sources/config.png'></a></div>
+</nav>
+
+<div class="cuadro , vertical-align">
+
+</div>
+
+</body>
+</html>
